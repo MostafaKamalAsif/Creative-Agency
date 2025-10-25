@@ -1,9 +1,8 @@
-import React from 'react'
-import Container from './Container'
-import Flex from './Flex'
 import Image from 'next/image'
+import Button from '../Button'
+import Container from '../Container'
+import Flex from '../Flex'
 import banner from "/public/Banner.svg"
-import Button from './Button'
 const Banner = () => {
   return (
     <>

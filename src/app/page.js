@@ -1,6 +1,5 @@
-import Banner from "@/Components/Banner";
-import Service from "@/Components/Service";
-import Image from "next/image";
+import Banner from "@/Components/Sections/Banner";
+import Service from "@/Components/Sections/Service";
 
 export default function Home() {
   return (

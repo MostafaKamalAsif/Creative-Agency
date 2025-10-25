@@ -1,13 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
-import Logo from "/public/Logo.svg";
-import Container from "./Container";
-import Flex from "./Flex";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Button from "./Button";
+import Button from "../Button";
+import Container from "../Container";
+import Flex from "../Flex";
+import Logo from "/public/Logo.svg";
 const Header = () => {
   const path = usePathname();
   return (
