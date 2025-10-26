@@ -4,11 +4,11 @@ import React from "react";
 
 const Button = ({href,text,className}) => {
   return (
-    <>
+    <><Link href={href}>
       <div className={`${className}`}>
         
-        <Link href={href}>{text}</Link>
-      </div>
+        {text}
+      </div></Link>
     </>
   );
 };

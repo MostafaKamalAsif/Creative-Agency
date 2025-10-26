@@ -8,7 +8,7 @@ import IconButton from '../Icon/IconButton'
 const Footer = () => {
   return (
     <>
-    <div className="py-[100px] bg-[#5956E8]/10">
+    <div id='contact' className="py-[100px] bg-[#5956E8]/10">
 <Container>
     <Flex className={'justify-between'}>
         <div className="">

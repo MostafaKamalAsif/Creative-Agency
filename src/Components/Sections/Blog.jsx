@@ -9,7 +9,7 @@ import BlogPost_3 from '/public/Blog_3.svg'
 const Blog = () => {
   return (
     <>
-    <div className="pb-[100px]">
+    <div id='blog' className="pb-[100px]">
         <Container>
             <div>
             <h3 className="font-bold text-[40px] text-center">Our Letest News</h3>

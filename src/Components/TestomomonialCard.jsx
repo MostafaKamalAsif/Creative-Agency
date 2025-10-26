@@ -6,7 +6,7 @@ import Flex from './Flex';
 import Cottation from '/public/cottation.svg'
 const TestomomonialCard = () => {
   return (
-    <div className='w-[370px]  rounded-[10px] shadow-[0px_6px_35px_rgba(0,0,0,0.08)] ' >
+    <div id='about' className='w-[370px]  rounded-[10px] shadow-[0px_6px_35px_rgba(0,0,0,0.08)] ' >
         <div className="pt-12 pb-6 pl-12 pr-6">
             <Image src={Avater} alt='Avater'/>
             <Flex className={'gap-x-2 py-7.5'}>

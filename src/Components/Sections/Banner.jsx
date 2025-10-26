@@ -6,7 +6,7 @@ import banner from "/public/Banner.svg"
 const Banner = () => {
   return (
     <>
-    <div className='bg-[#5956E8] py-[182px]'>
+    <div id='home' className='bg-[#5956E8] py-[182px]'>
         <Container>
             <Flex className={"justify-between"}>
 <div>

@@ -8,7 +8,7 @@ import Marketor from '/public/Digital_Marketor.svg'
 const Team = () => {
   return (
     <>
-      <div className="pb-[100px]">
+      <div id="about" className="pb-[100px]">
         <Container>
           <div>
             <h3 className="font-bold text-[40px] text-center">

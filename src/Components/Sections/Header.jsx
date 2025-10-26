@@ -1,75 +1,77 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import Button from "../Button";
 import Container from "../Container";
 import Flex from "../Flex";
 import Logo from "/public/Logo.svg";
+import Link from "next/link";
+
 const Header = () => {
-  const path = usePathname();
   return (
-    <div className="text-[#181818] text-[18px] font-medium py-5">
+    <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50 text-[#181818] text-[18px] font-medium py-5">
       <Container>
-        <Flex className={"justify-between"}>
-          <Link href={"/"}>
+        <Flex className="justify-between items-center">
+          {/* Logo */}
+          <Link  href="#home">
             <Image quality={100} src={Logo} alt="Logo" />
           </Link>
 
+          {/* Navigation Menu */}
           <ul className="flex items-center gap-x-12.5">
-            <li
-              className={` text-[18px] font-medium ${
-                path === "/"
-                  ? "text-[#5956E8] "
-                  : "text-[#181818] hover:text-[#5956E8] duration-300 "
-              }`}
-            >
-              <Link href={"/"}>Home</Link>
+            <li>
+              <Link 
+                href="#home"
+                className="text-[18px] font-medium text-[#181818] hover:text-[#5956E8] duration-300"
+              >
+                Home
+              </Link>
             </li>
-            <li
-              className={` text-[18px]font-medium  ${
-                path === "/about"
-                  ? "text-[#5956E8] font-bold"
-                  : "text-[#181818] hover:text-[#5956E8] duration-300 font-medium"
-              }`}
-            >
-              <Link href={"/about"}>About</Link>
+            <li>
+              <Link 
+                href="#about"
+                className="text-[18px] font-medium text-[#181818] hover:text-[#5956E8] duration-300"
+              >
+                About
+              </Link>
             </li>
-            <li
-              className={` text-[18px] font-medium ${
-                path === "/service"
-                  ? "text-[#5956E8] "
-                  : "text-[#181818] hover:text-[#5956E8] duration-300 "
-              }`}
-            >
-              <Link href={"/service"}>Service</Link>
+            <li>
+              <Link 
+                href="#service"
+                className="text-[18px] font-medium text-[#181818] hover:text-[#5956E8] duration-300"
+              >
+                Service
+              </Link>
             </li>
-            <li
-              className={` text-[18px] font-medium ${
-                path === "/blog"
-                  ? "text-[#5956E8] "
-                  : "text-[#181818] hover:text-[#5956E8] duration-300 "
-              }`}
-            >
-              <Link href={"/blog"}>Blog</Link>
+            <li>
+              <a
+                href="#blog"
+                className="text-[18px] font-medium text-[#181818] hover:text-[#5956E8] duration-300"
+              >
+                Blog
+              </a>
             </li>
-            <li
-              className={` text-[18px]  font-medium${
-                path === "/contact"
-                  ? "text-[#5956E8] "
-                  : "text-[#181818] hover:text-[#5956E8] duration-300 "
-              }`}
-            >
-              <Link href={"/contact"}>Contact</Link>
+            <li>
+              <Link
+                href="#contact"
+                className="text-[18px] font-medium text-[#181818] hover:text-[#5956E8] duration-300"
+              >
+                Contact
+              </Link>
             </li>
           </ul>
 
-          
-          <Button className={" bg-[#5956E8]  text-white py-3 px-6  rounded-[10px]  text-[18px] font-medium "} href={"/contact"} text={"Contact Us"}/>
+          {/* Contact Button */}
+          <Button
+            className={
+              "bg-[#5956E8] text-white py-3 px-6 rounded-[10px] text-[18px] font-medium"
+            }
+            href="#contact"
+            text="Contact Us"
+          />
         </Flex>
       </Container>
-    </div>
+    </header>
   );
 };
 

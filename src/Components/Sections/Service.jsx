@@ -4,7 +4,7 @@ import ServiceCard from "../ServiceCard";
 const Service = () => {
   return (
     <>
-      <div className="py-[100px]">
+      <div id="service" className="py-[100px]">
         <Container>
           <div>
             <h3 className="font-bold text-[40px] text-center">Our Services</h3>
