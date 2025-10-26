@@ -66,7 +66,7 @@ const Header = () => {
           </ul>
 
           
-          <Button className={" bg-[#5956E8]  text-white"} href={"/contact"} text={"Contact Us"}/>
+          <Button className={" bg-[#5956E8]  text-white py-3 px-6  rounded-[10px]  text-[18px] font-medium "} href={"/contact"} text={"Contact Us"}/>
         </Flex>
       </Container>
     </div>
