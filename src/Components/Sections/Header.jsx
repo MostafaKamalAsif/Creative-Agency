@@ -1,75 +1,93 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Button from "../Button";
 import Container from "../Container";
 import Flex from "../Flex";
 import Logo from "/public/Logo.svg";
 import Link from "next/link";
+import { Menu, X } from "lucide-react"; // icons
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
-    <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50 text-[#181818] text-[18px] font-medium py-5">
+    <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50 text-[#181818] text-[18px] font-medium py-4">
       <Container>
         <Flex className="justify-between items-center">
           {/* Logo */}
-          <Link  href="#home">
-            <Image quality={100} src={Logo} alt="Logo" />
+          <Link href="#home">
+            <Image quality={100} src={Logo} alt="Logo" className="w-[130px] h-auto" />
           </Link>
 
-          {/* Navigation Menu */}
-          <ul className="flex items-center gap-x-12.5">
-            <li>
-              <Link 
-                href="#home"
-                className="text-[18px] font-medium text-[#181818] hover:text-[#5956E8] duration-300"
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="#about"
-                className="text-[18px] font-medium text-[#181818] hover:text-[#5956E8] duration-300"
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="#service"
-                className="text-[18px] font-medium text-[#181818] hover:text-[#5956E8] duration-300"
-              >
-                Service
-              </Link>
-            </li>
-            <li>
-              <a
-                href="#blog"
-                className="text-[18px] font-medium text-[#181818] hover:text-[#5956E8] duration-300"
-              >
-                Blog
-              </a>
-            </li>
-            <li>
-              <Link
-                href="#contact"
-                className="text-[18px] font-medium text-[#181818] hover:text-[#5956E8] duration-300"
-              >
-                Contact
-              </Link>
-            </li>
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-x-10">
+            <Link href="#home" className="hover:text-[#5956E8] duration-300">
+              Home
+            </Link>
+            <Link href="#about" className="hover:text-[#5956E8] duration-300">
+              About
+            </Link>
+            <Link href="#service" className="hover:text-[#5956E8] duration-300">
+              Service
+            </Link>
+            <Link href="#blog" className="hover:text-[#5956E8] duration-300">
+              Blog
+            </Link>
+            <Link href="#contact" className="hover:text-[#5956E8] duration-300">
+              Contact
+            </Link>
+          </nav>
+
+          {/* Desktop Button */}
+          <div className="hidden lg:block">
+            <Button
+              href="#contact"
+              text="Contact Us"
+              className="bg-[#5956E8] text-white py-3 px-6 rounded-[10px] text-[18px] font-medium hover:bg-[#4a49d1] duration-300"
+            />
+          </div>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            onClick={toggleMenu}
+            className="block lg:hidden focus:outline-none text-[#181818]"
+          >
+            {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </Flex>
+
+        {/* Mobile Navigation */}
+        <div
+          className={`lg:hidden bg-white transition-all duration-300 overflow-hidden ${
+            menuOpen ? "max-h-[400px] mt-4" : "max-h-0"
+          }`}
+        >
+          <ul className="flex flex-col gap-4 text-center py-4">
+            {["home", "about", "service", "blog", "contact"].map((item) => (
+              <li key={item}>
+                <Link
+                  href={`#${item}`}
+                  onClick={toggleMenu}
+                  className="hover:text-[#5956E8] duration-300"
+                >
+                  {item.charAt(0).toUpperCase() + item.slice(1)}
+                </Link>
+              </li>
+            ))}
           </ul>
 
-          {/* Contact Button */}
-          <Button
-            className={
-              "bg-[#5956E8] text-white py-3 px-6 rounded-[10px] text-[18px] font-medium"
-            }
-            href="#contact"
-            text="Contact Us"
-          />
-        </Flex>
+          <div className="text-center pb-4">
+            <Button
+              href="#contact"
+              text="Contact Us"
+              className="bg-[#5956E8] text-white py-3 px-6 rounded-[10px] text-[18px] font-medium hover:bg-[#4a49d1] duration-300"
+            />
+          </div>
+        </div>
       </Container>
     </header>
   );
