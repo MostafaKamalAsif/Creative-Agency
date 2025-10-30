@@ -13,7 +13,7 @@ const Portfolio = () => {
     <>
       <div id="service" className="pb-20 md::pb-[100px]">
         <Container>
-          <div className="pl-3 md:p-0">
+          <div className="pl-2 md:p-0">
             <h3 className="font-bold text-[30px] md:text-[40px] text-center">
               Our Work Portfolio
             </h3>

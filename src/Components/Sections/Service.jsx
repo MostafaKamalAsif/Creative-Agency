@@ -6,7 +6,7 @@ const Service = () => {
     <>
       <div id="service" className=" py-20 md::py-[100px]">
         <Container>
-          <div className="pl-3 md:p-0">
+          <div className="pl-2 md:p-0">
             <h3 className="font-bold text-[30px] md:text-[40px] text-center">Our Services</h3>
             <p className="w-[420px] md:w-[542px] m-auto text-center pt-5 pb-12.5">
               There are many variations of passages of Lorem Ipsum available,

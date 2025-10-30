@@ -8,7 +8,7 @@ const Testomonial = () => {
     <>
       <div className="pb-20 md::pb-[100px]">
         <Container>
-          <div className="pl-3 md:p-0">
+          <div className="pl-2 md:p-0">
             <h3 className="font-bold text-[30px] md:text-[40px]   md:w-[603px]">
               We Care About Our Customer Experience Too
             </h3>
