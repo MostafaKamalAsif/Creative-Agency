@@ -11,18 +11,18 @@ import Web from "/public/web.png";
 const Portfolio = () => {
   return (
     <>
-      <div id="service" className="pb-[100px]">
+      <div id="service" className="pb-20 md::pb-[100px]">
         <Container>
-          <div>
-            <h3 className="font-bold text-[40px] text-center">
+          <div className="pl-3 md:p-0">
+            <h3 className="font-bold text-[30px] md:text-[40px] text-center">
               Our Work Portfolio
             </h3>
-            <p className="w-[542px] m-auto text-center pt-5 pb-12.5">
+            <p className="w-[420px] md:w-[542px] m-auto text-center pt-5 pb-12.5">
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form.
             </p>
           </div>
-          <Flex className={"flex-wrap justify-between gap-y-7.5"}>
+          <Flex className={"flex-wrap justify-center md:justify-between gap-y-7.5"}>
             <PortfolioCard
               imgsrc={Grapic}
               alt={"Graphic"}
