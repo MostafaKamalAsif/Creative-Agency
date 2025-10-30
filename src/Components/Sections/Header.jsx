@@ -15,12 +15,13 @@ const Header = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <header className="fixed top-0 left-0 w-[80%] lg:w-full  bg-white shadow-md z-50 text-[#181818] text-[18px] font-medium py-4">
-      <Container>
-        <Flex className="md:justify-between space-x-12  md:space-x-0 items-center">
+     <Container>
+    <div className=" w-full  bg-white   text-[#181818] text-[18px] font-medium py-4">
+     
+        <Flex className="md:justify-between justify-evenly  items-center">
           {/* Logo */}
           <Link href="#home">
-            <Image quality={100} src={Logo} alt="Logo" className="-ml-10 md:m-0 w-full" />
+            <Image quality={100} src={Logo} alt="Logo" className=" w-full" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -62,11 +63,11 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         <div
-          className={`lg:hidden bg-white transition-all duration-300 overflow-hidden ${
+          className={`lg:hidden bg-white transition-all m-auto duration-300 overflow-hidden ${
             menuOpen ? "w-fit max-h-[400px] mt-4" : "w-fit max-h-0"
           }`}
         >
-          <ul className="flex flex-col gap-4 text-center py-4">
+          <ul className="flex flex-col gap-4 text-center  py-4">
             {["home", "about", "service", "blog", "contact"].map((item) => (
               <li key={item}>
                 <Link
@@ -88,8 +89,9 @@ const Header = () => {
             />
           </div>
         </div>
+        </div>
       </Container>
-    </header>
+    
   );
 };
 
